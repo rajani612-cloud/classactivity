@@ -1,19 +1,16 @@
 package classactivity;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exceptionhandling {
-	public void check(int num){
+	public static void check(int size, int[] arr){
 		
-	int []arr1=new int[num];
+
 	try
 	{
-		
-	for(int i=0;i<num;i++)
-	{
-		arr1[i]=i;
-		System.out.print(" " +arr1[i]);
-	}
+		System.out.println("Acessing element at index "+size+ ":"+arr[size]);
+	
 	}
 	catch(ArrayIndexOutOfBoundsException  e )
 	{
@@ -28,18 +25,20 @@ public class Exceptionhandling {
 	public static void main(String [] args)
 	{
 		Scanner ob =new Scanner(System.in);
-		System.out.println("Enter num in array");
-		int n=ob.nextInt();
-		if(n<0)
+		System.out.println("Enter the size of the array: ");
+		int size=ob.nextInt();
+	//an array with specified size
+		int [] arr=new int[size];
+//		System.out.println("Enter array element ");
+		
+		//get user input for array element
+		for(int i=0;i<size;i++)
 		{
-			System.out.println("Please enter positive number");
-
+			System.out.println("Enter element at index" +i+ ":");
+			
+			arr[i]=ob.nextInt();
 		}
-		else
-		{
-			Exceptionhandling obj= new Exceptionhandling();
-			obj.check(n);
-		}
+		check(size,arr);
 		ob.close();
 		
 		

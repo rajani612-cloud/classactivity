@@ -10,7 +10,7 @@ public class RailwaySystem {
 		{
 			try
 			{
-				System.out.println(trainName + "is waiting for the track.");
+				System.out.println(trainName + " is waiting for the track.");
 			    wait();
 			}
 			catch(InterruptedException e) {
@@ -19,7 +19,7 @@ public class RailwaySystem {
 		}
 		
 		trackoccupied =true;
-		System.out.println(trainName + "is ussing the track");
+		System.out.println(trainName + " is ussing the track");
 		try {
 			Thread.sleep(2000);
 			
@@ -28,7 +28,7 @@ public class RailwaySystem {
 			Thread.currentThread().interrupt();
 		}
 		trackoccupied=false;
-		System.out.println(trainName+ "has cleared the track.");
+		System.out.println(trainName+ " has cleared the track.");
 		notify();
 	}
 	

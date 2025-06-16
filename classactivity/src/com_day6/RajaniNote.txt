@@ -1,0 +1,2 @@
+Good Morning and Welcome to fileHandeling
+byte  Stream and Character Stream
